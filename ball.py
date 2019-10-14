@@ -21,7 +21,7 @@ def new_ball():
     r2 = rnd(1, 100)
     c.create_oval(x-r, y-r, x+r, y+r, fill=choice(colors), width=0)
     c.create_oval(x2-r2, y2-r2, x2+r2, y2+r2, fill=choice(colors), width=0)
-    root.after(700, new_ball)
+    root.after(800, new_ball)
 
 
 def click(event):
