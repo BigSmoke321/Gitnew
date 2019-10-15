@@ -9,7 +9,7 @@ root.geometry('800x600')
 c=Canvas(root, bg='white')
 c.pack(fill=BOTH, expand=1)
 
-colors = ['red', 'orange', 'yellow', 'green', 'blue']
+colors = ['red', 'orange', 'yellow', 'green', 'blue', 'brown']
 def new_ball():
     global x, y, r, x2, y2, r2
     c.delete(ALL)
