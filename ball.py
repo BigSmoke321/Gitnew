@@ -1,6 +1,6 @@
 from tkinter import *
 from random import randrange as rnd, choice
-import time
+import time             #yeah it's useless thing
 root = Tk()
 root.geometry('1920x1200')
 
@@ -25,7 +25,7 @@ def new_ball():
 
 
 def click(event):
-    print(x, y, r, '   ', x2, y2, r2)
+    print(x, y, r, '    ', x2, y2, r2)
 
 new_ball()
 c.bind('<Button-1>', click)
