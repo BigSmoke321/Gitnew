@@ -37,24 +37,23 @@ def new_ball():
 
 
 def move_ball():
-    global vx, vy, x, y, clr
-    if (x <= 10):
+    global vx, vy, x, y, r, clr
+    if x <= r:
         st = [-1, 1]
         k = choice(st)
         vx = rnd(0, 6)
         vy = k * math.sqrt(25 - vx ** 2)
-    elif (x >= 1590):
+    elif x >= 1600-r:
         st = [-1, 1]
         k = choice(st)
         vx = rnd(-5, 1)
         vy = k * math.sqrt(25 - vx ** 2)
-    elif (y <= 10):
+    elif y <= r:
         vx = rnd(-5, 6)
         vy = math.sqrt(25 - vx ** 2)
-    elif (y >= 890):
+    elif y >= 900-r:
         vx = rnd(-5, 6)
         vy = (-1) * math.sqrt(25 - vx ** 2)
-
     x += vx
     y += vy
     c.delete(ALL)
@@ -70,6 +69,8 @@ def click(event):
         antiscore += 1
     label1['text'] = str(score)
     label2['text'] = str(antiscore)
+    if antiscore >= 10:
+        exit()
 
 
 new_ball()
